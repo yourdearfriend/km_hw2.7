@@ -15,7 +15,7 @@ class FirstTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        persons = processingData(data: data)
+        persons = processingDataV2(data: data)
     }
     
     // MARK: - Table view data source
@@ -43,22 +43,20 @@ class FirstTableViewController: UITableViewController {
         
         
     }
+}
 
-    func processingData(data: DataManager) -> [Person] {
-        var persons: [Person] = []
-
-        for i in 0 ..< data.names.count {
-
-            let name = data.names[i] 
-            let surname = data.surnames[i]
-            let email = data.emails[i]
-            let phone = data.phones[i]
-
-            persons.append(Person(name: name,
-                                  surname: surname,
-                                  phone: phone,
-                                  email: email))
+extension FirstTableViewController {
+    private func processingDataV2(data: DataManager) -> [Person] {
+        var person: [Person] = []
+        
+        var names: Set<String> = Set(data.names)
+        var surnames: Set<String> = Set(data.surnames)
+        var phones: Set<String> = Set(data.phones)
+        var emails: Set<String> = Set(data.emails)
+        
+        for _ in 0 ..< names.count {
+            person.append(Person(name: names.removeFirst(), surname: surnames.removeFirst(), phone: phones.removeFirst(), email: emails.removeFirst()))
         }
-        return persons
+        return person
     }
 }

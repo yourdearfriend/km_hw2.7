@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCn-dc-wVa">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aCn-dc-wVa">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Persons List-->
+        <!--Persons-->
         <scene sceneID="Aan-ux-aIA">
             <objects>
                 <tableViewController id="Rig-Sz-7or" customClass="FirstTableViewController" customModule="hw2_7" customModuleProvider="target" sceneMemberID="viewController">
@@ -42,11 +42,12 @@
                             <outlet property="delegate" destination="Rig-Sz-7or" id="74o-iq-j4O"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Persons List" id="aKZ-g6-qLR"/>
+                    <tabBarItem key="tabBarItem" title="Persons" image="person" catalog="system" id="pRD-3j-td5"/>
+                    <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="aKZ-g6-qLR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mNj-q8-hAW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="106" y="88"/>
+            <point key="canvasLocation" x="1102.5" y="87.676056338028175"/>
         </scene>
         <!--Label-->
         <scene sceneID="OIF-Kp-hih">
@@ -90,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PWQ-Xp-Z7g" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="922" y="88"/>
+            <point key="canvasLocation" x="2016" y="88"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zDF-Y6-fbZ">
@@ -101,12 +102,53 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="Rig-Sz-7or" kind="relationship" relationship="rootViewController" id="oTf-dK-wXw"/>
+                        <segue destination="GSg-aP-ih3" kind="relationship" relationship="rootViewController" id="oTf-dK-wXw"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="htS-ud-4Kz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-813" y="88"/>
         </scene>
+        <!--Persons List-->
+        <scene sceneID="6Mb-E0-KGM">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GSg-aP-ih3" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Persons List" id="KvJ-bY-bIY"/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="QSd-62-FPl">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Rig-Sz-7or" kind="relationship" relationship="viewControllers" id="98I-eU-JEG"/>
+                        <segue destination="CUB-Oh-qnd" kind="relationship" relationship="viewControllers" id="5Ns-1v-pch"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4j1-gV-eVB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="105" y="87.676056338028175"/>
+        </scene>
+        <!--All Persons-->
+        <scene sceneID="yts-SI-uOT">
+            <objects>
+                <viewController id="CUB-Oh-qnd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="AJW-Hb-orS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="e9e-rT-qhx"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Persons" image="person.2" catalog="system" id="JfT-07-hqN"/>
+                    <navigationItem key="navigationItem" title="All Persons" largeTitleDisplayMode="always" id="W5L-mu-fAC"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EtA-rZ-t9d" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1103" y="902"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="person" catalog="system" width="64" height="60"/>
+        <image name="person.2" catalog="system" width="64" height="40"/>
+    </resources>
 </document>
