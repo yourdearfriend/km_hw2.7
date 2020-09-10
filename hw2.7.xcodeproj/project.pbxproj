@@ -16,6 +16,7 @@
 		B52A16942506DADB00E86BBB /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A16932506DADB00E86BBB /* Person.swift */; };
 		B52A16972506DB6C00E86BBB /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = B52A16962506DB6C00E86BBB /* Data.swift */; };
 		B5F8A3DD2508202A003D436F /* DetailPersonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F8A3DC25082029003D436F /* DetailPersonViewController.swift */; };
+		B5F8A3DF25095ADE003D436F /* SecondTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B5F8A3DE25095ADE003D436F /* SecondTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B52A16932506DADB00E86BBB /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
 		B52A16962506DB6C00E86BBB /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 		B5F8A3DC25082029003D436F /* DetailPersonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPersonViewController.swift; sourceTree = "<group>"; };
+		B5F8A3DE25095ADE003D436F /* SecondTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,8 +86,9 @@
 		B52A168D2506D87D00E86BBB /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				B52A16902506D9AD00E86BBB /* FirstTableViewController.swift */,
 				B5F8A3DC25082029003D436F /* DetailPersonViewController.swift */,
+				B52A16902506D9AD00E86BBB /* FirstTableViewController.swift */,
+				B5F8A3DE25095ADE003D436F /* SecondTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -199,6 +202,7 @@
 				B52A16792506D85800E86BBB /* AppDelegate.swift in Sources */,
 				B52A16972506DB6C00E86BBB /* Data.swift in Sources */,
 				B52A167B2506D85800E86BBB /* SceneDelegate.swift in Sources */,
+				B5F8A3DF25095ADE003D436F /* SecondTableViewController.swift in Sources */,
 				B52A16942506DADB00E86BBB /* Person.swift in Sources */,
 				B52A16912506D9AD00E86BBB /* FirstTableViewController.swift in Sources */,
 			);

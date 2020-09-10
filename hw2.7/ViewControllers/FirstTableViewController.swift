@@ -5,17 +5,19 @@
 //  Created by Konstantin on 08.09.2020.
 //  Copyright © 2020 Konstantin. All rights reserved.
 //
-
 import UIKit
 
 class FirstTableViewController: UITableViewController {
-
+    
     let data = DataManager()
     var persons: [Person] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
         persons = processingDataV2(data: data)
+        
+        let secondTBVC = self.tabBarController?.viewControllers![1] as? SecondTableViewController
+        secondTBVC?.personsCurrent = persons
     }
     
     // MARK: - Table view data source
@@ -34,15 +36,12 @@ class FirstTableViewController: UITableViewController {
         return cell
     }
     
-    
     override func prepare(for segue: UIStoryboardSegue, sender: (Any)?) {
         guard let DetailPersonVS = segue.destination as? DetailPersonViewController
             else { return }
         guard let indexPath = tableView.indexPathForSelectedRow else { return }
-        DetailPersonVS.person = persons[indexPath.row]
-        
-        
-    }
+            DetailPersonVS.person = persons[indexPath.row]
+        }
 }
 
 extension FirstTableViewController {

@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1f-7a-eNP">
-                                <rect key="frame" x="20" y="394" width="374" height="91"/>
+                                <rect key="frame" x="120.5" y="402.5" width="173" height="91"/>
                                 <string key="text">tableviews
 is here…</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="38"/>
@@ -26,9 +26,8 @@ is here…</string>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c1f-7a-eNP" secondAttribute="trailing" constant="20" id="3qz-z6-KW5"/>
-                            <constraint firstItem="c1f-7a-eNP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="350" id="nw7-qp-k6r"/>
-                            <constraint firstItem="c1f-7a-eNP" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="s0y-MT-qLz"/>
+                            <constraint firstItem="c1f-7a-eNP" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="9jM-Or-H47"/>
+                            <constraint firstItem="c1f-7a-eNP" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="uYX-fZ-Rch"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
